@@ -1,0 +1,11 @@
+container:
+  # The name of the container in the form `<organization>/<name>`.  The pod's composefile.yml will need to use the
+  # same name for the image with the tag `stack`.  For example: `image: bozemanpass/act-runner:stack`
+  name: bozemanpass/blockscout
+  # An optional reference to the container's repository.  The format is: [hostname/]organization/repo[@tag_or_branch]
+  # The hostname is optional.  When omitted, github.com is assumed.  The tag is also optional.  If omitted,
+  # the main repo branch is used.  If `ref` is omitted entirely, the current repo is assumed.
+  ref: github.com/blockscout/blockscout
+  # Optional path to the container build script or command.  This path is relative to the `container.yml` file.
+  # If no build script is provided, the default build command will be used.
+  build: ./build.sh

@@ -1,0 +1,8 @@
+name: blockscout
+description: "Blockscout block explorer stack"
+containers:
+  - name: bozemanpass/blockscout
+    ref: .
+    path: containers/blockscout
+pods:
+  - name: blockscout
